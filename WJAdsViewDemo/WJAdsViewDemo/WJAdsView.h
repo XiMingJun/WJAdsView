@@ -23,7 +23,7 @@
 @class WJAdsView;
 
 @protocol WJAdsViewDelegate <NSObject>
-
+@optional
 /**
  *  广告弹框视图已经出现
  *
@@ -48,9 +48,7 @@
 @end
 @interface WJAdsView : UIView
 {
-
     long _selectIndex;//当前索引值
-
 }
 /**内容视图数组*/
 @property (nonatomic,retain) NSArray *containerSubviews;
@@ -58,6 +56,7 @@
 @property (nonatomic,retain) WJAdsContainerView *mainContainView;
 /**关闭按钮*/
 @property (nonatomic,retain) WJAdsCloseButton *closeButton;
+@property (nonatomic,retain) UIView *lineView;//直线
 /**水平边距*/
 @property (nonatomic,assign) float minHorizontalPadding;
 /**垂直边距*/
